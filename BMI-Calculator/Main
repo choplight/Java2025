@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        // Get user input
+        String name = UserInput.getName();
+        double weight = UserInput.getWeight();
+        double height = UserInput.getHeight();
+
+        // Calculate BMI
+        double bmi = BMICalculation.calculateBMI(weight, height);
+        String category = BMICalculation.getBMICategory(bmi);
+        String payment = BMICalculation.getInsurancePaymentCategory(bmi);
+        
+
+        // Display result
+        System.out.println("Hello, " + name + "! Your BMI is: " + bmi + " and your BMI category is " + category + ".");
+        System.out.println("Your insurance payment category is " + payment + ".");
+    }
+}
